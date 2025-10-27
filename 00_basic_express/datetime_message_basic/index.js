@@ -1,10 +1,11 @@
 import express from "express";
 
+// Initialize the express application
 const app = express();
 const PORT = 3000;
 
 app.get("/", (req, res) => {
-  // Return the current date and time
+  // Construct the message
   const currentDate = new Date();
   let message = "";
 
