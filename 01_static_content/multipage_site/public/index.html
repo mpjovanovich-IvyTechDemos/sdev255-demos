@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starter Code</title>
+    <link rel="stylesheet" href="/css/styles.css" />
+  </head>
+  <body>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+    <main>
+      <h1>Welcome to the Home page</h1>
+      <section>
+        <h2>About Paths</h2>
+        <p>
+          We are using <em>root relative</em> paths. You can tell because they
+          start with the <code>/</code> character. The site root for our Express
+          app is <code>public</code>, so it will start the path there and try to
+          find files based on the given path.
+        </p>
+        <ul>
+          <li>
+            <code>/</code> = start at the root and serve the default file.
+          </li>
+          <li><code>/about.html</code> = start at root and serve about.</li>
+          <li><code>/contact.html</code> start at root and serve contact.</li>
+          <li>
+            <code>/css/styles.css</code> needs to include the
+            <code>css</code> folder in the path, or else it would not work. Try
+            removing it and see what happens.
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
