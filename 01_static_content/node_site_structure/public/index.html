@@ -11,19 +11,70 @@
       <a href="/">Home</a>
     </nav>
     <main>
-      <h1>Welcome to the Web Server Demo</h1>
+      <h1>Node.js Site Structure</h1>
+      <img
+        src="images/nodejs_wide.png"
+        alt="Node.js Logo"
+        style="width: 100%; height: auto"
+      />
       <section>
-        <h2>What is a Web Server?</h2>
-        <img
-          src="images/nodejs_wide.png"
-          alt="Node.js Logo"
-          style="width: 100%; height: auto"
-        />
+        <h2>Root Directory</h2>
         <p>
-          A web server is a program that listens on a specific port (like 3000)
-          and responds to HTTP requests from clients (browsers). When you visit
-          a URL, your browser sends a request to the server, and the server
-          sends back a response (usually HTML, CSS, or other files).
+          The root directory is the starting point for the project. It typically
+          contains "meta-files" that describe what should be included in the
+          project and how other tools should interact with it.
+        </p>
+        <p>
+          You will almost always see see a <code>.gitignore</code> file. This
+          defines which files should not go into the Git repository.
+        </p>
+      </section>
+      <section>
+        <h2>Server</h2>
+        <p>
+          The <code>server</code> directory contains the Express server
+          application. There is no hard rule that it must be called "server";
+          you may see it called "app", "lib", or "bin"
+        </p>
+        <h3>package.json</h3>
+        <p>
+          Every Node.js project must have a <code>package.json</code> file. This
+          file tells Node things like:
+        </p>
+        <ul>
+          <li>Which is the starting file for the program?</li>
+          <li>What should the package (program) that we wrote be named?</li>
+          <li>What other packages does our program use?</li>
+        </ul>
+        <p>
+          When you run the <code>npm install</code> command form a directory
+          that contains a package.json file it uses this file to figure out what
+          packages and third-party libraries need to be installed. These are
+          called <em>dependencies</em>.
+        </p>
+        <p>
+          Installed dependencies go in a <code>node_modules</code> directory.
+          This should always be ignored in the .gitignore file.
+        </p>
+        <p>
+          The install command also creates a
+          <code>package-lock.json</code> file. This is used to track the
+          specific versions of each package that are used.
+        </p>
+      </section>
+      <section>
+        <h2>Public</h2>
+        <p>
+          The <code>public</code> directory contains static assets (files) that
+          will be served by the web server: the html pages, css, and javascript
+          files that are returned to the client.
+        </p>
+      </section>
+      <section>
+        <h2>Other</h2>
+        <p>
+          As projects get more complex, you will see many other subdirectories
+          that help keep the project organized.
         </p>
       </section>
     </main>
