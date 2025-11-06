@@ -6,7 +6,7 @@ const PORT = 3000;
 const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 app.get("/", (req, res) => {
-  // filter even  or odd based on query param
+  // filter none, even, or odd based on query param
 });
 
 app.listen(PORT, () => {
