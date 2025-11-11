@@ -1,4 +1,4 @@
-# Datetime Message Basic
+# Returning the Server Time
 
 This example shows how you can include logic to control the response that is sent by the server.
 

@@ -1,4 +1,4 @@
-# Datetime Message HTML
+# Returning HTML Content
 
 This example shows how you can return HTML content from the server.
 
