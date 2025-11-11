@@ -4,10 +4,13 @@ const app = express();
 const PORT = 3000;
 
 // We are expecting a querystring in the format: ?text=Hello&times=3
-//   times is optional and defaults to 1
+// "times" is optional and defaults to 1
 app.get("/", (req, res) => {
-  // Validate that the text parameter was provided
+  // Assign to temp variables for readability
   const text = req.query.text;
+
+  // Validate that the text parameter was provided
+  // Make sure to exit the function with return!
   if (!text) {
     res.send("Error: No text provided");
     return;
@@ -27,9 +30,13 @@ app.get("/", (req, res) => {
     return;
   }
 
+  // CHALLENGE: Add validation to make sure the number of times is at least 1
+  // and at most 1000.
+
+  // Build the result string
   let result = "";
   for (let i = 0; i < times; i++) {
-    result += text;
+    result += text + " "; // Add a space between each word
   }
   res.send(result);
 });
