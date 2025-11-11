@@ -9,7 +9,7 @@ app.get("/", (req, res) => {
   const currentDate = new Date();
   let message = "";
 
-  // TODO: Let's try refactoring this to its own function.
+  // CHALLENGE: Try refactoring this to its own "getGreeting" function and calling it here.
   if (currentDate.getHours() < 12) {
     message = "Good morning";
   } else if (currentDate.getHours() < 18) {
