@@ -34,3 +34,7 @@ We use the `replace` method to replace the placeholders with the dynamic content
 Try installing the project dependencies and running the application. Then try the following paths:
 
 - `http://localhost:3000`
+
+## Challenge
+
+Try changing the HTML color names to see what happens. You can find a list of HTML color names here: https://htmlcolorcodes.com/color-names/

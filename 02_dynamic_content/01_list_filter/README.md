@@ -4,6 +4,6 @@
 
 ## Try it
 
-Try the following paths:
+Try installing the project dependencies and running the application. Then try the following paths:
 
 - `http://localhost:3000`

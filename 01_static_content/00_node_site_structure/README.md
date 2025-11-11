@@ -1,5 +1,7 @@
 # Node Site Structure
 
+Now that we've had some exposure to Node.js and Express, it's time to look into the project structure in more detail.
+
 This project is meant to demonstrate the basic structure of a Node.js application. The focus is on the file system structure rather than the application logic.
 
 ## What to look for

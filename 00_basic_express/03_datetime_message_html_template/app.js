@@ -17,17 +17,13 @@ const MESSAGE_TEMPLATE = `
 `;
 
 app.get("/", (req, res) => {
-  // Try changing the colors to html colors to see what happens:
+  // CHALLENGE: Try changing the colors to html colors to see what happens:
   // https://htmlcolorcodes.com/color-names/
   const h1_color = "slateblue";
   const p_color = "turquoise";
 
   let message = MESSAGE_TEMPLATE.replace("#h1_color#", h1_color);
   message = message.replace("#p_color#", p_color);
-
-  // Note - we can chain the replace calls because they return the modified string.
-  // Try commenting the above and using this:
-  // const message = MESSAGE_TEMPLATE.replace("#h1_color#", h1_color).replace("#p_color#", p_color);
 
   res.send(message);
 });

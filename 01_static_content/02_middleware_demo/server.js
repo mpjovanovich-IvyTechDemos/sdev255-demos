@@ -16,6 +16,7 @@ functions can be chained together to perform functions like:
 */
 
 // Custom logger middleware
+// Just shows the request method and requested URL in the console.
 app.use((req, res, next) => {
   console.log(`Logger: ${req.method} ${req.url}`);
   // next() is used to call the next middleware function in the chain.
@@ -23,10 +24,13 @@ app.use((req, res, next) => {
   next();
 });
 
+// CHALLENGE: Try adding a new middleware function that logs the current date
+// and time.
+
 // This line tells Express to serve static files from the public directory.
 // If a request is made that matches a file in the public directory, Express will serve it.
 // In this case no more middleware will be executed.
-app.use(express.static("../public"));
+app.use(express.static("public"));
 
 // We can still add routes that are not static files.
 // We often serve only CSS and images from the public directory and dymanic

@@ -15,3 +15,7 @@ Try installing the project dependencies and running the application. Then try th
 - `http://localhost:3000`
 
 Note that the message will change based on the server's current time.
+
+## Challenge
+
+Try refactoring the getGreeting function to its own function and calling it from within the root route handler.
