@@ -18,6 +18,6 @@ These allow us to embed variables directly into a string. It's much easier to co
 
 ## Try it
 
-Try the following paths:
+Try installing the project dependencies and running the application. Then try the following paths:
 
 - `http://localhost:3000`

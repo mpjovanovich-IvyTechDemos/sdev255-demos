@@ -1,5 +1,5 @@
 {
-  "name": "lab",
+  "name": "demo",
   "main": "server.js",
   "type": "module",
   "scripts": {

@@ -1,10 +1,11 @@
 {
-  "name": "express_sandbox",
+  "name": "demo",
   "type": "module",
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
   "scripts": {
+    "dev": "nodemon app.js",
     "start": "node app.js"
   },
   "keywords": [],
@@ -12,5 +13,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
   }
 }

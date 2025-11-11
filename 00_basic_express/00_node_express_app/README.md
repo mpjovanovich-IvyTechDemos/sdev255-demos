@@ -90,7 +90,7 @@ The `app.listen()` method is used to start the server. It takes two arguments:
 
 ## Try it
 
-Try the following paths:
+Try installing the project dependencies and running the application. Then try the following paths:
 
 - `http://localhost:3000`
 - `http://localhost:3000/proverb`
