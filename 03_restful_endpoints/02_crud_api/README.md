@@ -88,3 +88,7 @@ _PUT: http://localhost:3000/grades/c003_
 _DELETE: http://localhost:3000/grades/c003_
 
 If you need to reset the grades you can restart the application.
+
+## Challenge
+
+Add the missing validation that's noted in the POST, PUT, and DELETE routes.

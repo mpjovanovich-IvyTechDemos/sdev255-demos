@@ -3,12 +3,7 @@ import express from "express";
 const app = express();
 const PORT = 3000;
 
-// Grades object
-const finalGrades = {
-  c001: 99,
-  c002: 90,
-  c003: 88,
-};
+// const db = new sqlite3.Database('grades.db');
 
 /* ********************************************************
  * Middleware
@@ -21,15 +16,13 @@ app.use(express.json());
  ******************************************************** */
 // Return all grades as a JSON object
 app.get("/grades", (req, res) => {
-  res.json(finalGrades);
+  //
 });
 
 // Return the grades for the given student ID
 app.get("/grades/:id", (req, res) => {
   const id = req.params.id;
-
-  const grade = finalGrades[id];
-  res.status(200).json(grade);
+  //
 });
 
 /* ********************************************************
@@ -39,12 +32,7 @@ app.post("/grades", (req, res) => {
   const id = req.body.id;
   const grade = req.body.grade;
 
-  // CHALLENGE: Check if the student already exists and return an error if they
-  // do. Use 409 status code.
-
-  // Add the new grade to the finalGrades object
-  finalGrades[id] = grade;
-  res.status(201).json({ id: id, grade: grade });
+  // res.status(201).json({ id: id, grade: grade });
 });
 
 /* ********************************************************
@@ -54,12 +42,7 @@ app.put("/grades/:id", (req, res) => {
   const id = req.params.id;
   const grade = req.body.grade;
 
-  // Challenge: Check if the student already exists and return an error if they
-  // do not. Use 404 status code.
-
-  // Update the grade in the finalGrades object
-  finalGrades[id] = grade;
-  res.status(201).json({ id: id, grade: grade });
+  // res.status(201).json({ id: id, grade: grade });
 });
 
 /* ********************************************************
@@ -68,14 +51,7 @@ app.put("/grades/:id", (req, res) => {
 app.delete("/grades/:id", (req, res) => {
   const id = req.params.id;
 
-  // CHALLENGE: Check if the student already exists and return an error if they
-  // do not. Use 404 status code.
-
-  // Delete the grade from the finalGrades object
-  delete finalGrades[id];
-
-  const message = `Grade deleted for user: ${id}`;
-  res.status(200).json({ message: message });
+  // res.status(200).json({ message: message });
 });
 
 /* ********************************************************

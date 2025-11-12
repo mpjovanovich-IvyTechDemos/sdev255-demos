@@ -17,6 +17,8 @@
   - [List Filter](02_dynamic_content/02_list_filter/)
 - RESTful Endpoints
   - [Using HTTP POST](03_restful_endpoints/00_using_http_post/)
+  - [CRUD API](03_restful_endpoints/02_crud_api/)
+  - [CRUD with SQL](03_restful_endpoints/03_crud_with_sql/)
 
 # Running a Node.js Express Application
 
