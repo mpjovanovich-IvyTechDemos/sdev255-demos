@@ -26,7 +26,7 @@ app.use(express.json());
 app.get("/mustards", (req, res) => {
   const sql = "SELECT * FROM Mustard";
 
-  db.all(sql, (err, rows) => {
+  db.all(sql, function (err, rows) {
     if (err) {
       res.status(500).json({ error: err.message });
     } else {
@@ -43,7 +43,7 @@ app.get("/mustards/:id", (req, res) => {
 
   const sql = "SELECT * FROM Mustard WHERE id = ?";
 
-  db.get(sql, [id], (err, row) => {
+  db.get(sql, [id], function (err, row) {
     if (err) {
       res.status(500).json({ error: err.message });
     } else {
@@ -64,7 +64,7 @@ app.post("/mustards", (req, res) => {
 
   const sql = `INSERT INTO Mustard (id, brand, type) VALUES (?, ?, ?)`;
 
-  db.run(sql, [id, brand, type], (err) => {
+  db.run(sql, [id, brand, type], function (err) {
     if (err) {
       res.status(500).json({ error: err.message });
     } else {

@@ -41,12 +41,9 @@ app.get("/mustards/:id", (req, res) => {
 
   // Validate id here; not shown...
 
-  const sql = "SELECT * FROM Mustard WHERE id = " + id;
+  const sql = "SELECT * FROM Mustard WHERE id = ?";
 
-  // Debug output
-  console.log(`sql: ${sql}`);
-
-  db.get(sql, function (err, row) {
+  db.get(sql, [id], function (err, row) {
     if (err) {
       res.status(500).json({ error: err.message });
     } else {
@@ -58,23 +55,20 @@ app.get("/mustards/:id", (req, res) => {
 /* ********************************************************
  * POST routes
  ******************************************************** */
-app.post("/mustards", (req, res) => {
+app.post("/mustards", function (req, res) {
   // Object destructuring
   // This is a shorthand for storing object properties in variables
-  const { id, brand, type } = req.body;
+  const { brand, type } = req.body;
 
   // Validate the data here; not shown...
 
-  const sql = `INSERT INTO Mustard (id, brand, type) VALUES (${id}, '${brand}', '${type}')`;
+  const sql = `INSERT INTO Mustard (brand, type) VALUES (?, ?)`;
 
-  // Debug output
-  console.log(`sql: ${sql}`);
-
-  db.run(sql, function (err) {
+  db.run(sql, [brand, type], function (err) {
     if (err) {
       res.status(500).json({ error: err.message });
     } else {
-      res.status(201).json({ id: id, brand: brand, type: type });
+      res.status(201).json({ id: this.lastID, brand: brand, type: type });
     }
   });
 });

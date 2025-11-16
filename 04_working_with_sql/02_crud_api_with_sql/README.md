@@ -17,12 +17,12 @@ The `db` sqlite object that we created has methods on it to handle SQL statement
 
 ### Callback functions
 
-Each of the methods above accepts a callback function that takes an error and optionally a result.
+Each of the methods above accepts an anonymous callback function that takes an error and optionally a result.
 
 This function will be called after the SQL statement is executed. We can check for errors and use the results:
 
 ```js
-db.all(sql, (err, rows) => {
+db.all(sql, function (err, rows) {
   if (err) {
     res.status(500).json({ error: err.message });
   } else {
@@ -30,6 +30,8 @@ db.all(sql, (err, rows) => {
   }
 });
 ```
+
+_Note:_ We will see later that it is best to not use arrow functions when defining callback functions using the sqlite3 package. Instead use the `function` keyword.
 
 ## Try it
 

@@ -26,12 +26,10 @@ In the sqlite3 method calls we add a `?` placeholder for the value that will be 
 
 ```js
 const sql = `SELECT * FROM Mustard WHERE id = ?`;
-db.get(sql, [id], (err, row) => {
+db.get(sql, [id], function (err, row) {
   // ...
 });
 ```
-
-## What to look for
 
 ## Try it
 
