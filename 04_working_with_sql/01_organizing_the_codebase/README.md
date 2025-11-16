@@ -1,52 +1,73 @@
-# Connecting to SQLite
+# Organizing the codebase
 
-SQLite is a lightweight database engine that keeps a database in a single file. This makes it easy to deploy and use in a wide variety of applications.
+Now that our applications are getting more complex, we need to do more than cram all of the code into one file.
+
+Instead we should encapsulate related functionality into separate files and import them where they are needed.
 
 ## What to look for
 
-### Setting file paths
+### Side note: CommonJS vs ES Modules
 
-#### Getting the current directory
-
-There is a common pattern in Node.js applications to get the directory of the current file:
+**CommonJS** is the older way to import and export modules in JavaScript. It is the default module system in Node.js if you don't specify otherwise in the `package.json` file. If you see code using `require` and `module.exports` it is using CommonJS:
 
 ```js
-import { dirname } from "node:path";
-import { fileURLToPath } from "node:url";
-
-const __dirname = dirname(fileURLToPath(import.meta.url));
+const sqlite3 = require("sqlite3");
 ```
 
-#### Joining directories and file names
+ES Modules is the newer way to import and export modules in JavaScript. We enable it by setting the `type` field in the `package.json` file to `module`:
 
-Any time that we need to join directories or file names we should use the `path` module instead of hardcoding path separators like `\`. We can simply comma separate the path segments:
+_package.json_
+
+```json
+{
+  "type": "module"
+}
+```
+
+After that we can use the `import` keyword to import the module into our file:
 
 ```js
-import path from "path";
-const filePath = path.join(__dirname, "data", "example.txt");
+import sqlite3 from "sqlite3";
 ```
 
-Using the `path` module makes sure that paths work on all operating systems.
+### Creating a custom module
 
-### Opening and closing the database
-
-The `sqlite3.Database` constructor takes a file path and opens the database file for read/write access. This will create the file if it does not exist:
+Creating a custom module is a simple as creating a new file and exporting the functionality we want to use in other files. We do this with the `export` keyword:
 
 ```js
-const db = new sqlite3.Database(DB_PATH);
+export SOME_CONSTANT = "some value";
+
+export function someFunction() {
+    console.log("I am a function in a module");
+}
 ```
 
-Between the open and close we can execute SQL statements. In this case we are executing SQL that was read from a file to create a table.
+Then we can import and use the module in other files:
 
 ```js
-db.exec(sql);
+import { SOME_CONSTANT, someFunction } from "./module.js";
+
+console.log(SOME_CONSTANT);
+someFunction();
 ```
 
-Finally, we should close the database connection when we are done:
+### Restructuring our application
 
-```js
-db.close();
-```
+Let's review the changes we made since the previous version of the application:
+
+#### Application code moved to `src` directory
+
+Placing application code in the `src` directory is a Node.js convention. The package.json goes in the root directory. Now that we have multiple files we should start following this convention.
+
+In this case we also have a `data` directory that contains the database file and the SQL script to initialize the database.
+
+#### New `db.js` file
+
+Everything that has to do with creating and initializing the database goes in this file. This keeps it out of the main application file.
+
+#### Cleaner `app.js` file
+
+The `app.js` file focuses only on initializing and starting the application.
 
 ## Try it
 
