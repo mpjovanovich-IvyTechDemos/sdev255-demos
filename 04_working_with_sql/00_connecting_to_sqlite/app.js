@@ -19,6 +19,3 @@ const sql = fs.readFileSync(INIT_PATH, "utf8");
 
 // Execute the SQL commands in the script
 db.exec(sql);
-
-// Close the database connection (the open file)
-db.close();

@@ -28,7 +28,7 @@ const filePath = path.join(__dirname, "data", "example.txt");
 
 Using the `path` module makes sure that paths work on all operating systems.
 
-### Opening and closing the database
+### Opening the database
 
 The `sqlite3.Database` constructor takes a file path and opens the database file for read/write access. This will create the file if it does not exist:
 
@@ -36,16 +36,10 @@ The `sqlite3.Database` constructor takes a file path and opens the database file
 const db = new sqlite3.Database(DB_PATH);
 ```
 
-Between the open and close we can execute SQL statements. In this case we are executing SQL that was read from a file to create a table.
+After opening the database we can execute SQL statements. In this case we are executing the SQL from the `init.sql` file to create a table.
 
 ```js
 db.exec(sql);
-```
-
-Finally, we should close the database connection when we are done:
-
-```js
-db.close();
 ```
 
 ## Try it

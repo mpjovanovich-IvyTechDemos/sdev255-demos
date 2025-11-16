@@ -65,12 +65,28 @@ In this case we also have a `data` directory that contains the database file and
 
 Everything that has to do with creating and initializing the database goes in this file. This keeps it out of the main application file.
 
+We have wrapped the database connection in a Promise to ensure that the database is opened before we use it. For now all you need to know is that we have to use the `await` keyword before calling the function.
+
+```js
+const db = await createConnection();
+```
+
 #### Cleaner `app.js` file
 
 The `app.js` file focuses only on initializing and starting the application.
+
+We have also added error handling in the form of a try/catch block to catch any issues and exit if needed. Most likely this would be:
+
+- The database file path is incorrect
+- The SQL init script file is incorrect
+- Either of those files is corrupt or locked, and cannot be opened
 
 ## Try it
 
 Try installing the project dependencies and running the application.
 
 In order to see the data you will need to install an extension in VS Code or an application like DB Browser for SQLite.
+
+## Challenge
+
+Try changing the INIT_PATH to a non-existent file and run the application. You should see an error message in the console.
