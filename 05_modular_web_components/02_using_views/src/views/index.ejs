@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Birds of Indiana</title>
+    <link
+      rel="stylesheet"
+      href="https://edwardtufte.github.io/tufte-css/tufte.css"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <h1>Birds of Indiana</h1>
+    <p>
+      Welcome to the Birds of Indiana website. Here you can find information
+      about the birds of Indiana.
+    </p>
+    <% if (isMember) { %>
+    <p>Thanks for your continued support to the Birds of Indiana club!</p>
+    <% } else { %>
+    <p>
+      Consider joining the Birds of Indiana club by contacting us at
+      <a href="mailto:info@birdsindiana.org">info@birdsindiana.org</a>.
+    </p>
+    <% } %>
+  </body>
+</html>

@@ -72,4 +72,13 @@ res.send(html);
 
 ## Try it
 
+Try installing and running the program. Then try the following URLs. Then try the following routes:
+
+- /item?id=0&admin=true
+- /item?id=1&admin=true
+- /item?id=1&admin=false
+- /items
+
 ## Challenge
+
+Try modifying the "items" route to accept an "admin" query parameter. If the admin parameter is true, show an "Add" button at the bottom of the list.

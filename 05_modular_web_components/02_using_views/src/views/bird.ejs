@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= bird.name %></title>
+    <link
+      rel="stylesheet"
+      href="https://edwardtufte.github.io/tufte-css/tufte.css"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <h1><%= bird.commonName %></h1>
+    <p><%= bird.scientificName %></p>
+    <img
+      style="width: 50%; height: auto"
+      src="<%= bird.imageUrl %>"
+      alt="<%= bird.commonName %>"
+    />
+  </body>
+</html>
