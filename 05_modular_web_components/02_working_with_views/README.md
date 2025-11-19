@@ -1,4 +1,4 @@
-# Using Views
+# Working with Views
 
 The next step to keeping our codebase organized is to move the HTML code out of the routes and into **views**.
 
