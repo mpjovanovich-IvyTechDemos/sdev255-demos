@@ -16,3 +16,4 @@ try {
 }
 
 // The main application logic goes here
+db.exec("SELECT * FROM mustard");

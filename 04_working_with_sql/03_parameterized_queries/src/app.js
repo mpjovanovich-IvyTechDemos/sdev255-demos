@@ -62,7 +62,7 @@ app.post("/mustards", (req, res) => {
 
   // Validate the data here; not shown...
 
-  const sql = `INSERT INTO Mustard (id, brand, type) VALUES (?, ?, ?)`;
+  const sql = `INSERT INTO mustard (id, brand, type) VALUES (?, ?, ?)`;
 
   db.run(sql, [id, brand, type], function (err) {
     if (err) {
