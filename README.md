@@ -17,19 +17,34 @@
   - [List Filter](02_dynamic_content/02_list_filter/)
 - RESTful Endpoints
   - [Using HTTP POST](03_restful_endpoints/00_using_http_post/)
+  - [Route Parameters](03_restful_endpoints/01_route_parameters/)
   - [CRUD API](03_restful_endpoints/02_crud_api/)
-  - [CRUD with SQL](03_restful_endpoints/03_crud_with_sql/)
+- Working with SQL
+  - [Connecting to SQLite](04_working_with_sql/00_connecting_to_sqlite/)
+  - [Organizing the Codebase](04_working_with_sql/01_organizing_the_codebase/)
+  - [CRUD API with SQL](04_working_with_sql/02_crud_api_with_sql/)
+  - [Parameterized Queries](04_working_with_sql/03_parameterized_queries/)
+  - [Getting ID of Inserted Record](04_working_with_sql/04_getting_id_of_inserted_record/)
+- Modular Web Components
+  - [Templating Engines](05_modular_web_components/00_templating_engines/)
+  - [Control Logic in HTML](05_modular_web_components/01_control_logic_in_html/)
+  - [Working with Views](05_modular_web_components/02_working_with_views/)
+- Client Side JavaScript
+  - [Working with DOM](06_client_side_javascript/00_working_with_DOM/)
+  - [Event Listeners](06_client_side_javascript/01_event_listeners/)
+  - [Event Object](06_client_side_javascript/02_event_object/)
 
 # Running a Node.js Express Application
 
 ## Setup
 
-1. From the terminal use the `cd` command to navigate to the directory of the application you want to run. This is the directory that contains the `package.json` file.
+1. From VS Code, click File > Open Folder and select the root directory of the project (the folder that contains the `package.json` file).
+1. Double check that you are in the correct directory by running the `pwd` command in the terminal to print the current working directory, and the `ls` command to list the files in the current directory. You should see the `package.json` file in the root directory.
 1. Run the `npm install` command to install dependencies. This must be done before you can run the application.
 
 ## Running and Debugging
 
-You can run the project using:
+After installint the project dependencies, you can run the project using:
 
 ### VS Code Debugger
 
