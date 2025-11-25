@@ -1,4 +1,4 @@
-# Client Side JavaScript I
+# Working with the DOM
 
 ## What is the DOM?
 

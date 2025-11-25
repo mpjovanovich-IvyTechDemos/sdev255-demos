@@ -1,6 +1,4 @@
-# Client Side JavaScript II
-
-## Event listeners
+# Event Listeners
 
 **Event listeners** are functions that are called when an event occurs. You can add an event listener to any element in the document. After adding an event listener, then element is **subscribed** to the event.
 
@@ -14,7 +12,7 @@ The code that runs when the event occurs is called the **event handler**.
 
 This is most often written as an **anonymous function** - a function defined inline instead of a named function elsewhere in the code.
 
-### Event types
+## Event types
 
 A few common event types are:
 
