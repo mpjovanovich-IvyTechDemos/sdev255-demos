@@ -33,6 +33,7 @@
   - [Working with DOM](06_client_side_javascript/00_working_with_DOM/)
   - [Event Listeners](06_client_side_javascript/01_event_listeners/)
   - [Event Object](06_client_side_javascript/02_event_object/)
+  - [Local Storage](06_client_side_javascript/03_localstorage/)
 
 # Running a Node.js Express Application
 
