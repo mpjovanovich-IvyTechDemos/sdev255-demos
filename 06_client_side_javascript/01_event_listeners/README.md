@@ -82,3 +82,7 @@ Modern CSS is very capable of doing many UI tasks. If you can do it with CSS, do
 - Media queries
 
 Turn to JavaScript when you need to do something that CSS can't do.
+
+## Challenge
+
+Try adding a change event listener to the input field in the demo. When the user types in the input field, if the text matches the text of an existing list item, disable the Add button by setting the disabled attribute. If the text does not match the text of an existing list item, enable the Add button by removing the disabled attribute.
