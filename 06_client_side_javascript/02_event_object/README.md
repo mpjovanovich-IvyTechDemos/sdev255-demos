@@ -6,7 +6,7 @@ The most common property is the `target` property, which is the element that tri
 
 ## Event Bubbling
 
-Event bubbling is the process of events bubbling up the DOM tree. This means that the event will be triggered on all parent elements, until it reaches the root element. This is the default behavior of events.
+Event bubbling is the process of events traversing up the DOM tree. This means that the event will be triggered on all parent elements, until it reaches the root element. This is the default behavior of events.
 
 ```javascript
 const page = document.getElementById("page");
