@@ -34,6 +34,8 @@
   - [Event Listeners](06_client_side_javascript/01_event_listeners/)
   - [Event Object](06_client_side_javascript/02_event_object/)
   - [Local Storage](06_client_side_javascript/03_localstorage/)
+- Organizing Code With Classes
+  - [Repository ORM Pattern](07_organizing_code_with_classes/00_repository_orm_pattern/)
 
 # Running a Node.js Express Application
 
