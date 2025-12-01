@@ -1,4 +1,4 @@
-# Demos
+g Demos
 
 ## Table of Contents
 
@@ -35,7 +35,8 @@
   - [Event Object](06_client_side_javascript/02_event_object/)
   - [Local Storage](06_client_side_javascript/03_localstorage/)
 - Organizing Code With Classes
-  - [Repository ORM Pattern](07_organizing_code_with_classes/00_repository_orm_pattern/)
+  - [Repository ORM Pattern: Starter](07_organizing_code_with_classes/00_repository_orm_starter/)
+  - [Repository ORM Pattern: Refactor](07_organizing_code_with_classes/01_repository_orm_refactor/)
 
 # Running a Node.js Express Application
 
