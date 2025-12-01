@@ -15,6 +15,9 @@ app.use(express.urlencoded({ extended: true }));
 const db = getDb();
 const userRepository = new UserRepository(db);
 
+/* ***************************************
+ * Route handlers
+ *************************************** */
 // Login route handler
 app.post("/login", (req, res) => {
   // Request validation
