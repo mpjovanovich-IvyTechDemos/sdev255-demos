@@ -1,6 +1,6 @@
 import express from "express";
 import { getDb } from "./db.js";
-import { UserRepository } from "./userRepository.js";
+import { UserRepository } from "./classes/userRepository.js";
 
 /* ***************************************
  * Initialize app and middleware
@@ -34,22 +34,6 @@ app.post("/login", (req, res) => {
     message: "Login successful",
     user,
   });
-});
-
-// API: Get single user by email
-app.get("/users/by-email/:email", (req, res) => {
-  // Check for malformed request
-  if (!req.params || !req.params.email) {
-    return res.status(400).json({ error: "Bad request" });
-  }
-  const email = req.params.email;
-
-  const user = userRepository.fetchByEmail(email);
-  if (!user) {
-    return res.status(404).json({ error: "User not found" });
-  }
-
-  res.json(user);
 });
 
 // Get active users
