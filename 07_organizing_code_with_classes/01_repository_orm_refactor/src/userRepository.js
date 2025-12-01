@@ -23,7 +23,7 @@ export class UserRepository {
     return (
       this.db
         .prepare(
-          "SELECT id, email, username, created_at, is_active FROM users WHERE email = ?"
+          "SELECT id, email, username, password, created_at, is_active FROM users WHERE email = ?"
         )
         .get(email) || null
     );

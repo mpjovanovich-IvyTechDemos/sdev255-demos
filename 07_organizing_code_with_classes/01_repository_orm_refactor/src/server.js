@@ -77,6 +77,7 @@ app.patch("/users/:id", (req, res) => {
     return res.status(400).json({ error: "Bad request" });
   }
   const id = req.params.id;
+  const { email, username, is_active } = req.body;
 
   try {
     const user = userRepository.update(id, email, username, is_active);
