@@ -41,7 +41,7 @@ g Demos
   - [Callback Functions](08_fetching_data_from_the_client/00_callback_functions/)
   - [Promises](08_fetching_data_from_the_client/01_promises/)
   - [Async/Await](08_fetching_data_from_the_client/02_async_await/)
-  - [Fetch API](08_fetching_data_from_the_client/03_fetch_api/)
+  - [Client-Side Rendering](08_fetching_data_from_the_client/03_client_side_rendering/)
 
 # Running a Node.js Express Application
 
