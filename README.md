@@ -37,6 +37,11 @@ g Demos
 - Organizing Code With Classes
   - [Repository ORM Pattern: Starter](07_organizing_code_with_classes/00_repository_orm_starter/)
   - [Repository ORM Pattern: Refactor](07_organizing_code_with_classes/01_repository_orm_refactor/)
+- Fetching Data from the Client
+  - [Callback Functions](08_fetching_data_from_the_client/00_callback_functions/)
+  - [Promises](08_fetching_data_from_the_client/01_promises/)
+  - [Async/Await](08_fetching_data_from_the_client/02_async_await/)
+  - [Fetch API](08_fetching_data_from_the_client/03_fetch_api/)
 
 # Running a Node.js Express Application
 

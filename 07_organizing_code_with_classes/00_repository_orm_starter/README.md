@@ -37,7 +37,7 @@ The **single responsibility principle** states that a class or function should h
 
 This means that the class or function should only expose to the outside world what is necessary and hide the implementation details. Some functionality may be internal to the class and should not be exposed (exported in JavaScript terms).
 
-### Command Query Separation
+### Command query separation
 
 **Command query separation** states that a function either be:
 
