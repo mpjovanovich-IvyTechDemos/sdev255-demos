@@ -68,15 +68,15 @@ function slowAdd(number) {
 // We can chain `then` to call slowAddOne several times in sequence:
 slowAdd(1)
   .then((result1) => {
-    console.log("First addition:", result1); // 1
+    console.log("First addition:", result1); // 2
     return slowAdd(result1);
   })
   .then((result2) => {
-    console.log("Second addition:", result2); // 2
+    console.log("Second addition:", result2); // 3
     return slowAdd(result2);
   })
   .then((result3) => {
-    console.log("Third addition:", result3); // 3
+    console.log("Third addition:", result3); // 4
   })
   .catch((error) => {
     // This is essentially a try/catch block for the entire promise chain
