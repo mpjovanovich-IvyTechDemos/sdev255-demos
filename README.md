@@ -1,4 +1,8 @@
-g Demos
+# SDEV 255 Demos
+
+Each of the demos below is a standalone project that can be run independently.
+
+This is best done by cloning the repository and then opening the demos in VS Code. Use the File > Open Folder command to open the demo that you are interested in.
 
 ## Table of Contents
 
@@ -42,6 +46,11 @@ g Demos
   - [Promises](08_fetching_data_from_the_client/01_promises/)
   - [Async/Await](08_fetching_data_from_the_client/02_async_await/)
   - [Client-Side Rendering](08_fetching_data_from_the_client/03_client_side_rendering/)
+- Authentication
+  - [Cookies](09_authentication/00_cookies/)
+  - [Session Management](09_authentication/01_session_management/)
+  - [Password Hashing](09_authentication/02_password_hashing/)
+  - [Environment Configuration](09_authentication/03_environment_configuration/)
 
 # Running a Node.js Express Application
 
