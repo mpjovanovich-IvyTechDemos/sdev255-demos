@@ -51,6 +51,8 @@ This is best done by cloning the repository and then opening the demos in VS Cod
   - [Session Management](09_authentication/01_session_management/)
   - [Password Hashing](09_authentication/02_password_hashing/)
   - [Environment Configuration](09_authentication/03_environment_configuration/)
+- Software Testing
+  - [Unit Testing](10_software_testing/00_unit_testing/)
 
 # Running a Node.js Express Application
 
