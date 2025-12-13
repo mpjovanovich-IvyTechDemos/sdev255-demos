@@ -53,6 +53,7 @@ This is best done by cloning the repository and then opening the demos in VS Cod
   - [Environment Configuration](09_authentication/03_environment_configuration/)
 - Software Testing
   - [Unit Testing Basics](10_software_testing/00_unit_testing_basics/)
+  - [Parameterized Testing](10_software_testing/01_parameterized_testing/)
 
 # Running a Node.js Express Application
 
