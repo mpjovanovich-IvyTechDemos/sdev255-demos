@@ -4,7 +4,7 @@ Any non-trivial application should include automated tests. While these tests ad
 
 We may never think that someone will use our application in a way that we haven't thought of. But over a large enough scale it will almost certainly happen.
 
-_Note for new developers_: Unit testing is often something learned on the job. You need to first master the basics of application development before you can write effective tests. We are introducing it here so that you know it's an important skill that you will need to pick up as you grow your career. If you go to an interview - ask them if they use automated testing (unit or integration tests). If they don't - that's a red flag, and you should probably look for a company with developers who can better mentor you.
+_Note for new developers_: Unit testing is often something learned on the job. You need to first master the basics of application development before you can write effective tests. We are introducing it here so that you know it's an important skill that you will need to pick up as you grow your career.
 
 ## Testing frameworks
 
