@@ -59,12 +59,17 @@ As a guidelines, test names should read like a sentence and should describe the 
 We should not use function names or implementation details in the test names; this leads to brittle tests that will break if code is refactored:
 
 ```javascript
-// BAD: brittle test that will break if implementation details change
+// BAD: Tightly coupled to implementation
 describe("getStaticGreeting", () => {
-  test("should return 'Hello, welcome!'", () => {
-    const expected = "Hello, welcome!";
-    const result = getStaticGreeting();
-    expect(result).toBe(expected);
+  test("returns 'Hello, welcome!'", () => {
+    expect(getStaticGreeting()).toBe("Hello, welcome!");
+  });
+});
+
+// BETTER: Describes behavior from user perspective
+describe("Static Greeting", () => {
+  test("provides welcoming message to users", () => {
+    expect(getStaticGreeting()).toBe("Hello, welcome!");
   });
 });
 ```

@@ -1,4 +1,4 @@
-# Paramaterized Testing
+# Parameterized Testing
 
 In the previous demo we saw how we needed many tests to cover all of the boundary cases and paths of execution for our greeting function.
 
