@@ -136,3 +136,19 @@ As you add more functionality to your codebase, you should add tests for any cri
 - Always make your test go red (fail) prior to making it green (pass).
 - We should test all edge cases, boundary cases, and error cases; not just the "happy path".
 - Write your tests as you are developing your code; this is much more effective than retrofitting your codebase with tests.
+
+## Callenge
+
+Add the other boundary cases for the `getTimeBasedGreeting` function - the lower and upper bounds for each range:
+
+```javascript
+if (hour >= 5 && hour < 12) {
+  return "Good morning!";
+} else if (hour >= 12 && hour < 18) {
+  return "Good afternoon!";
+} else if (hour >= 18 && hour < 23) {
+  return "Good evening!";
+} else if (hour >= 23 || hour < 5) {
+  return "Good night!";
+}
+```
